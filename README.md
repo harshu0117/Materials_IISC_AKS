@@ -3,6 +3,12 @@
 
 # 🧠 Materials‑Science Domain‑Adapted LLaMA 3 8B (Prof. A.K. Singh Corpus)
 
+[![Author](https://img.shields.io/badge/Author-harshu0117-blue)](https://github.com/harshu0117)
+[![Model](https://img.shields.io/badge/Model-LLaMA3--8B-green)](https://huggingface.co/meta-llama)
+[![Framework](https://img.shields.io/badge/Unsloth-Finetuning%20Made%20Easy-orange)](https://github.com/unslothai/unsloth)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow)](https://huggingface.co/)
+
+
 This repository contains a **domain-adapted LLaMA 3 8B** model, further pre-trained on **223 materials‑science papers** authored by Prof. Abhishek K. Singh.
 
 ---
