@@ -17,7 +17,63 @@ This repository contains a **domain-adapted LLaMA 3 8B** model, further pre-
 
 - **Perplexity:** 9.4790  
 - **Tokens evaluated:** 51,100  
-- **Avg. tokens per sample:** 511.0
+- **Avg. tokens per sample:** 511.0  
+
+## 🧪 Evaluation Methodology
+
+Both the **base model** and the **pre-trained model** were evaluated using the **exact same prompts**.  
+Responses were validated and scored by **ChatGPT (as evaluator)**.
+
+---
+
+## 🔍 Evaluation Results
+
+### **Prompt 1**
+
+#### Model 1 Score: **5/10**
+
+- Identifies 3 materials but not 5.
+- No numerical comparison of properties.
+- Contains repetitive content.
+- No analysis of **PbTe** or **SiGe**.
+- Mentions advantages of **Bi₂Te₃**.
+
+#### Model 2 Score: **6.5/10**
+
+- Slightly better organization.
+- Incorrectly lists high thermal conductivity as an advantage.
+- Lists pros/cons for all three materials.
+- Still lacks numeric data.
+
+---
+
+### **Prompt 2**
+
+#### Model 1 Score: **5.5/10**
+
+- Defines thermoelectric effect and **ZT**.
+- Copies prompt and repeats paragraphs.
+- No mention of specific materials or property values.
+- Ends abruptly.
+
+#### Model 2 Score: **7/10**
+
+- Better physics explanation and flow.
+- Mentions **Seebeck coefficient** and charge carrier effects.
+- Still no mention of specific materials or quantified values.
+- Ends abruptly.
+
+---
+
+## ⚙️ Pretraining Details
+
+A key point to note is that the model was **pretrained on just 223 research papers**, and the process took **6 hours on Kaggle's free T4 GPU (15 GB VRAM)**.  
+
+Despite the **limited size of the pretraining corpus**, the model still achieved **significant improvements in downstream evaluations**.  
+
+This highlights the **potential for even greater performance gains** with larger, high-quality domain-specific datasets and more extensive pretraining in the future.
+
+---
 
 ## 📈 Training vs. Validation Loss
 
@@ -25,6 +81,7 @@ The figure below shows the model’s learning curves during domain-adaptive pret
 
 ![Training and Validation Loss](train_test_loss.png)
 
+---
 
 ## 🧪 Workflow Overview
 
@@ -41,6 +98,7 @@ The figure below shows the model’s learning curves during domain-adaptive pret
   Visualizes train/validation loss curves during DAPT.
 
 
+---
 
 ## 🚀 Usage
 
@@ -49,20 +107,13 @@ The figure below shows the model’s learning curves during domain-adaptive pret
    git clone https://github.com/harshu0117/Materials_IISC_AKS.git
    cd Materials_IISC_AKS
 
-
-2. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Follow notebooks** in order:
+2. **Follow notebooks** in order:
 
    * `pdf_to_txt_data_extract.ipynb` → raw text extraction
    * `hf_dataprep.ipynb` → chunked dataset creation
    * `dapt-final-aks-mrc.ipynb` → model training, evaluation, merge, and deployment
 
-4. **Load the model** in Hugging Face Transformers:
+3. **Load the model** in Hugging Face Transformers:
 
    ```python
     from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -75,7 +126,7 @@ The figure below shows the model’s learning curves during domain-adaptive pret
 
    ```
 
-5. **Inference example**:
+4. **Inference example**:
 
    ```python
    # Set pad token if not set
