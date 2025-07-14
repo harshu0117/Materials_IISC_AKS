@@ -1,7 +1,7 @@
 
 
 
-# 🧠 Materials‑Science Domain‑Adapted LLaMA 3 8B (Prof. A.K. Singh Corpus)
+# 🧠 Materials‑Science Domain‑Adapted LLaMA 3 8B (Unsloth)
 
 [![Author](https://img.shields.io/badge/Author-harshu0117-blue)](https://github.com/harshu0117)
 [![Model](https://img.shields.io/badge/Model-LLaMA3--8B-green)](https://huggingface.co/meta-llama)
