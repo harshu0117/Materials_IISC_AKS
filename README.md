@@ -8,6 +8,9 @@
 [![Framework](https://img.shields.io/badge/Unsloth-Finetuning%20Made%20Easy-orange)](https://github.com/unslothai/unsloth)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow)](https://huggingface.co/)
 
+For a detailed overview of the repo clik here ==>
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/harshu0117/Materials_IISC_AKS)
+
 
 This repository contains a **domain-adapted LLaMA 3 8B** model, further pre-trained on **223 materials‑science papers** authored by Prof. Abhishek K. Singh.
 
